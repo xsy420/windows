@@ -91,3 +91,5 @@ environment:
 You can browse from [Windows 7](https://file.cnxiaobai.com/Windows/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%8C%85/Windows%207/)
 
 And make sure your XML file has changed to **zh-CN** locale. You can use the script in [\[Question\]: 修改windos密码 和 使用自定义的镜像无法使用rdp远程](https://github.com/dockur/windows/issues/490)
+
+You can found all commands in [commands.txt](commands.txt)
