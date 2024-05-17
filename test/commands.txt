@@ -1,0 +1,56 @@
+win7
+
+Network Discovery
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+FPS
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "SMB-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "SMB-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+Remote Desktop
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "RemoteFX"`) do @for /f "delims=-" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "RemoteFX"`) do @for /f "delims=-" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+win2008
+
+Network Discovery
+
+for /f "usebackq tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+FPS
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "SMB-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "SMB-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+Remote Desktop
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "RemoteFX"`) do @for /f "delims=-" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "RemoteFX"`) do @for /f "delims=-" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+winvista
+
+Network Discovery
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "Pub-WSD-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
+FPS
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "SMB-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do @echo "%~nxc"
+
+for /f "usebackq skip=1 tokens=2 delims=:" %a in (`netsh advfirewall firewall show rule name^=all ^| findstr "SMB-In"`) do @for /f "delims=(" %b in ("%a") do @for /f "tokens=*" %c in ("%b") do netsh advfirewall firewall set rule group="%~nxc" new enable=Yes
+
